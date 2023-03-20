@@ -1,0 +1,84 @@
+<html>
+<head>
+<style>
+p{
+	font-size:30px;
+	color:red;
+	text-align:center;
+}
+</style>
+
+
+</head>
+<body>
+<div style="width:1922px;height:1000px;background-color:#3152c2;margin-top:-170px;margin-left:-10px;">
+<div style="position:absolute;margin-top:400px;height:400px;width:300px;background-color:#41b6f7;margin-left:300px;border-radius:10%;">
+
+<form name='formularz'>
+<p>Oferta Handlowa:
+</p>
+<br>
+<h3 style="margin-top:-20px;">
+Woda Żywiec:	2zł/1,5L<br>
+Woda Muszynianka:	3Zł/1,5L<br>
+Woda Cisowianka:	4zł/1,5L<br>
+<p> Formularz zakupów:
+</p>
+Rodzaj wody:
+<select id='typ' name='typ'>
+<option value='A'>Żywiec</option>
+<option value='B'>Muszynianka</option>
+<option value='C'>Cisowianka</option>
+</select>
+<br>
+<label for='ilosc' placeholder="Ile butelek?"></label>
+<input type='number' id='ilosc' name='ilosc'>
+<br>
+<input type='button' value='Oblicz' onclick="oblicz()">
+</form>
+<br>
+Wynik:
+<h3 id='wynik' style="text-align:center;font-size:30px;margin-top:-10px;"></h3>
+
+
+
+</button>
+</div>
+<div style="width:902px;height:900px;background-color:#41a6d7;float:right;margin-top:77px;">
+
+<img src="https://www.prawo.pl/gfx/prawopl/_thumbs/pl/wkdokumenty/000/507/079/1/rzeki-00015_thinkstockphotos,nnyD62SdolTLo7bXW5mZ.jpg?v=1" style="width:640px;height:400px;margin-left:140px;margin-top:300px;">
+
+<div style="width:1802px;height:100px;background-color:white;float:left;margin-top:-600px;margin-left:-970px;border: 4px solid black;margin-bottom:-280px;text-align:center;font-size:80px;">
+Źródlana woda uśmiechu doda!!!☺
+</div>
+
+
+</div>
+<div style="width:1922px;height:140px;background-color:lightgray;float:left;margin-top:0px;text-align:center;font-size:30px;">
+"Woda"
+<br>
+- prawdopodobnie jakaś osoba
+</div>
+</div>
+</body>
+<script src="aaaaaa.js">
+function oblicz(){
+var wynik=0;
+var typ=document.forms['formularz']['typ'].value;
+var ilosc=document.forms['formularz']['ilosc'].value;
+if(typ=='A')
+{
+wynik=1*ilosc;
+}
+else if(typ=='B')
+{
+wynik=2*ilosc;
+}
+else if(typ=='C')
+{
+wynik=3*ilosc;
+}
+
+document.getElementById('wynik').innerHTML=wynik;
+}
+</script>
